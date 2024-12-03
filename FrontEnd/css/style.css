@@ -5,6 +5,7 @@
 
 :root {
     --main_color: #FF510C;
+    --soft_main_color: #FFF1EB;
     --white_default_color: #FFFFFF;
     --soft_gray_color: #FBFBFB;
     --mediom_gray_color: #A6A6A6;
@@ -20,12 +21,15 @@
 
 body {
     background-color: var(--white_default_color);
+    overflow-x: hidden;
 }
 
 .main_container {
     margin: 0 auto;
     width: 1242px;
 }
+
+/* header */
 
 .header_top {
     background-color: var(--main_color);
@@ -301,7 +305,7 @@ body {
     }
 }
 .header_banner .image_counter {
-    margin-top: 30px;
+    margin: 30px 0 60px 0;
     display: flex;
     gap: 4px;
 }
@@ -321,6 +325,215 @@ body {
     animation: changes_image_counter1 9s infinite;
 }
 
+/* main */
 
+.amazing_offers {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.amazing_offers .header {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    margin-bottom: 120px;
+}
+.amazing_offers .header .title{
+    position: relative;
+    color: var(--main_color);
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    grid-column: 2 / 3;
+}
+.amazing_offers .header .title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0.5em;
+    left: 0;
+    background-color: var(--main_color);
+}
+.amazing_offers .header .timer{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.amazing_offers .header .timer>span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.amazing_offers .header .timer .item span:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: var(--soft_main_color);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--main_color);
+}
+@keyframes amazing_offers_slider {
+    0%, 33.33% {
+        transform: translateX(0);
+    }
+    33.33%, 66.66% {
+        transform: translateX(100%);
+    }
+    66.66%, 100% {
+        transform: translateX(200%);
+    }
+}
+.amazing_offers .slider .slides{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    animation: amazing_offers_slider 9s infinite;
+}
+.amazing_offers .slider .box{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--soft_gray_color);
+}
+.amazing_offers .slider .box .banner{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.amazing_offers .slider .box .banner img{
+    transform: translateY(-30px) translateX(-10px);
+    width: 100%;
+    object-fit: contain;
+    scale: 1.8;
+}
+.amazing_offers .slider .box .details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.amazing_offers .slider .box .details h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+.amazing_offers .slider .box .details .price {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main_color);
+    text-align: start;
+}
+.amazing_offers .slider .box .details .selection_colors{
+    display: flex;
+    gap: 5px;
+}
+.amazing_offers .slider .box .details .selection_colors span{
+    width: 28px;
+    height: 28px;
+    border-radius: 20px;
+    background-color: var(--main_color);
+}
+.amazing_offers .slider .box .details .selection_colors span:nth-child(1){
+    background-color: #A848DE;
+    ;
+}
+.amazing_offers .slider .box .details .selection_colors span:nth-child(2){
+    background-color: #ECECEC;
+    ;
+}
+.amazing_offers .slider .box .details .selection_colors span:nth-child(3){
+    background-color: #828282;
+    ;
+}
+.amazing_offers .slider .box .details div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.amazing_offers .slider .box .details div:last-child p{
+    font-weight: 300;
+    color: var(--main_color);
+}
+.amazing_offers .slider .box .details div:last-child div > :first-child{
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--main_color);
+    color: var(--white_default_color);
+    font-size: 18px;
+    font-weight: 500;
+}
+.amazing_offers .slider .box .details div:last-child div > :last-child{
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 81, 12, 0.5);
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.amazing_offers .slider .slider_counter{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 
-
+}
+@keyframes amazing_offers_counter3 {
+    0%, 33.33% {
+        background-color: var(--main_color);
+    }
+    33.33%, 66.66% {
+        background-color: var(--mediom_gray_color);
+    }
+    33.33%, 100% {
+        background-color: var(--mediom_gray_color);
+    }
+}
+@keyframes amazing_offers_counter2 {
+    0%, 33.33% {
+        background-color: var(--mediom_gray_color);
+    }
+    33.33%, 66.66% {
+        background-color: var(--main_color);
+    }
+    66.66%, 100% {
+        background-color: var(--mediom_gray_color);
+    }
+}
+@keyframes amazing_offers_counter1 {
+    0%, 33.33% {
+        background-color: var(--mediom_gray_color);
+    }
+    0%, 66.66% {
+        background-color: var(--mediom_gray_color);
+    }
+    66.66%, 100% {
+        background-color: var(--main_color);
+    }
+}
+.amazing_offers .slider .slider_counter span{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: var(--mediom_gray_color);
+}
+.amazing_offers .slider .slider_counter > :nth-child(1) {
+    animation: amazing_offers_counter3 9s infinite;
+}
+.amazing_offers .slider .slider_counter > :nth-child(2) {
+    animation: amazing_offers_counter2 9s infinite;
+}
+.amazing_offers .slider .slider_counter > :nth-child(3) {
+    animation: amazing_offers_counter1 9s infinite;
+}

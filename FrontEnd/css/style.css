@@ -593,6 +593,8 @@ body {
 }
 .best_selling .slides .box .banner img {
     object-fit: contain;
+    width: 250px;
+    height: 270px;
 }
 .best_selling .slides .box .add_to_carts button {
     display: flex;
@@ -752,7 +754,121 @@ body {
     margin: 30px 0px 0 15px;
 }
 
-
+.apple_watch {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.apple_watch .title p {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.apple_watch .content {
+    display: flex;
+    gap: 10px;
+}
+.apple_watch .content > .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.apple_watch .content > .banner .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 435px;
+    height: 445px;
+    background-color: var(--main_color);
+    border-radius: 10px;
+}
+.apple_watch .content > .banner button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #FF510C0D;
+    width: 100%;
+    height: 80px;
+    font-size: 30px;
+    font-weight: 500;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.apple_watch .content > .banner path {
+    fill: var(--main_color);
+}
+.apple_watch .content > .banner button span{
+    color: var(--main_color);
+}
+@keyframes apple_watch_slider {
+    0%, 25% {
+        transform: translateX(0);
+    }
+    25%, 50% {
+        transform: translateX(calc(100% + 10px));
+    }
+    50%, 75% {
+        transform: translateX(calc(100% + 10px));
+    }
+    75%, 100% {
+        transform: translateX(0);
+    }
+}
+.apple_watch .slider {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 30px;
+    overflow: hidden;
+}
+.apple_watch .slider .box {
+    width: 300px;
+    height: 525px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--soft_gray_color);
+    border-radius: 10px;
+    animation: apple_watch_slider 18s infinite;
+}
+.apple_watch .slider .box .banner {
+    background-color: var(--white_default_color);
+}
+.apple_watch .slider .box hr {
+   width: 100%;
+   border: 1px #E4E4E4 solid;
+}
+.apple_watch .slider .box .banner img {
+    object-fit: contain;
+    width: 250px;
+    height: 270px;
+}
+.apple_watch .slider .box .add_to_carts button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+}
+.apple_watch .slider .box h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.apple_watch .slider .box p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.apple_watch .slider .box .add_to_carts {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 

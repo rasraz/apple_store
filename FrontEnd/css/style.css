@@ -870,5 +870,38 @@ body {
     justify-content: flex-end;
 }
 
-
+.ending_banner .banner {
+    margin-top: 120px;
+    width: 1240px;
+    height: 588px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-image: url(../images/8bc13a114037903\ 1.png);
+    border-radius: 10px;
+}
+.ending_banner .banner .content {
+    margin:0 0 60px 60px;
+    width: 350px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.ending_banner .banner .content p{
+    font-size: 53px;
+    font-weight: 500;
+    color: white;
+}
+.ending_banner .banner .content button{
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    color: #581719;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
 
